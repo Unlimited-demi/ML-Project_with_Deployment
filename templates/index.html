@@ -1,1 +1,78 @@
-<h1> Welcome to the home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Exam Performance Prediction</title>
+</head>
+<body style="height: 100%; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #e0e5ec; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 90%; max-width: 600px; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 8px 8px 15px #a7a7a7, -8px -8px 15px #ffffff; margin: 20px;">
+        <h1 style="font-size: 24px; color: #333; text-align: center; padding-bottom: 20px;">Student Exam Performance Indicator</h1>
+        <form action="/predictdata" method="post" style="display: flex; flex-direction: column;">
+            <fieldset style="border: none;">
+                <legend style="font-size: 20px; color: #333; margin-bottom: 10px;">Student Exam Performance Prediction</legend>
+                <div style="margin-bottom: 10px;">
+                    <label for="gender" style="display: block; margin-bottom: 5px; font-size: 16px; color: #333;">Gender:</label>
+                    <select id="gender" name="gender" required style="width: 100%; padding: 8px 10px; margin-top: 2px; border-radius: 8px; border: 2px solid #ccc; background: #e0e5ec; box-shadow: inset 2px 2px 4px #a7a7a7, inset -2px -2px 4px #ffffff;">
+                        <option value="" disabled selected>Select your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="ethnicity" style="margin-bottom: 5px; font-size: 16px; color: #333;">Race or Ethnicity:</label>
+                    <select id="ethnicity" name="ethnicity" required style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 2px solid #ccc; background: #e0e5ec; box-shadow: inset 2px 2px 4px #a7a7a7, inset -2px -2px 4px #ffffff;">
+                        <option value="" disabled selected>Select Ethnicity</option>
+                        <option value="group A">Group A</option>
+                        <option value="group B">Group B</option>
+                        <option value="group C">Group C</option>
+                        <option value="group D">Group D</option>
+                        <option value="group E">Group E</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="parental_level_of_education" style="margin-bottom: 5px; font-size: 16px; color: #333;">Parental Level of Education:</label>
+                    <select id="parental_level_of_education" name="parental_level_of_education" required style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 2px solid #ccc; background: #e0e5ec; box-shadow: inset 2px 2px 4px #a7a7a7, inset -2px -2px 4px #ffffff;">
+                        <option value="" disabled selected>Select Parent Education</option>
+                        <option value="associate's degree">associate's degree</option>
+                        <option value="bachelor's degree">bachelor's degree</option>
+                        <option value="high school">high school</option>
+                        <option value="master's degree">master's degree</option>
+                        <option value="some college">some college</option>
+                        <option value="some high school">some high school</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="lunch" style="margin-bottom: 5px; font-size: 16px; color: #333;">Lunch Type:</label>
+                    <select id="lunch" name="lunch" required style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 2px solid #ccc; background: #e0e5ec; box-shadow: inset 2px 2px 4px #a7a7a7, inset -2px -2px 4px #ffffff;">
+                        <option value="" disabled selected>Select Lunch Type</option>
+                        <option value="free/reduced">free/reduced</option>
+                        <option value="standard">standard</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="test_preparation_course" style="margin-bottom: 5px; font-size: 16px; color: #333;">Test Preparation Course:</label>
+                    <select id="test_preparation_course" name="test_preparation_course" required style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 2px solid #ccc; background: #e0e5ec; box-shadow: inset 2px 2px 4px #a7a7a7, inset -2px -2px 4px #ffffff;">
+                        <option value="" disabled selected>Select Test Preparation Course</option>
+                        <option value="none">None</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="reading_score" style="margin-bottom: 5px; font-size: 16px; color: #333;">Reading Score:</label>
+                    <input type="number" id="reading_score" name="reading_score" min="0" max="100" required placeholder="Enter Reading Score" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 2px solid #ccc; background: #e0e5ec; box-shadow: inset 2px 2px 4px #a7a7a7, inset -2px -2px 4px #ffffff;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="writing_score" style="margin-bottom: 5px; font-size: 16px; color: #333;">Writing Score:</label>
+                    <input type="number" id="writing_score" name="writing_score" min="0" max="100" required placeholder="Enter Writing Score" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 2px solid #ccc; background: #e0e5ec; box-shadow: inset 2px 2px 4px #a7a7a7, inset -2px -2px 4px #ffffff;">
+                </div>
+                <button type="submit" style="width: 100%; padding: 10px; font-size: 16px; text-transform: uppercase; border: none; border-radius: 8px; color: white; background: #007BFF; box-shadow: 2px 2px 4px #a7a7a7, -2px -2px 4px #ffffff; cursor: pointer; transition: background-color 0.3s ease;">Predict your Maths Score</button>
+            </fieldset>
+        </form>
+        <div id="result" style="text-align: center; padding: 20px; margin-top: 20px; font-size: 18px; color: #333;">
+            {{ results | safe }}
+        </div>
+    
+    </div>
+</body>
+</html>

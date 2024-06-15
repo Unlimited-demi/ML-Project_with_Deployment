@@ -1,0 +1,91 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e0e5ec; /* light gray background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 15px #a7a7a7,
+                -8px -8px 15px #ffffff;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background: #e0e5ec; /* matching background color */
+    box-shadow: inset 2px 2px 4px #a7a7a7,
+                inset -2px -2px 4px #ffffff;
+}
+
+input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: #007BFF;
+    box-shadow: 2px 2px 4px #a7a7a7,
+                -2px -2px 4px #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
