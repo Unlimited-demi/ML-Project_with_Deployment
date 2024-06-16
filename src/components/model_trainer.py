@@ -2,7 +2,7 @@ from dataclasses import dataclass
 import os 
 import sys
 from utils import save_object
-from isort import file 
+
 sys.path.append('C:\\Users\\USER\\Desktop\\mlprojects\\src')
 from exception import CustomException
 from logger import logging
