@@ -9,7 +9,7 @@ sys.path.append('C:\\Users\\USER\\Desktop\\mlprojects\\src')
 from exception import CustomException
 from logger import logging
 import dill 
-from isort import file
+
 import pandas as pd
 import numpy as np
 
